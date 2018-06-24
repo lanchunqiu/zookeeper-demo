@@ -22,7 +22,7 @@ public class WatcherUsageDemo implements Watcher {
      */
     @Test
     public void watchEventTest() throws IOException, KeeperException, InterruptedException {
-        ZooKeeper zooKeeper = new ZooKeeper("192.168.227.129:2181,192.168.227.130:2181,192.168.227.131:2181/zk-book",5000,new WatcherUsageDemo());
+        ZooKeeper zooKeeper = new ZooKeeper(ZKConfig.CONNECTION_STR,5000,new WatcherUsageDemo());
 
         System.out.println(zooKeeper.getState());
         try {

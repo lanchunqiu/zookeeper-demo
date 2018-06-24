@@ -23,7 +23,7 @@ public class CreateUsageDemo implements Watcher{
          */
         @Test
         public void CreateSyncUsage() throws IOException, KeeperException, InterruptedException {
-            ZooKeeper zooKeeper = new ZooKeeper("192.168.227.129:2181,192.168.227.130:2181,192.168.227.131:2181/zk-book",5000,new CreateUsageDemo());
+            ZooKeeper zooKeeper = new ZooKeeper(ZKConfig.CONNECTION_STR,5000,new CreateUsageDemo());
 
             System.out.println(zooKeeper.getState());
             try {
@@ -64,7 +64,7 @@ public class CreateUsageDemo implements Watcher{
          */
         @Test
         public void CreateAsyncUsage() throws KeeperException, InterruptedException, IOException {
-            ZooKeeper zooKeeper = new ZooKeeper("192.168.227.129:2181,192.168.227.130:2181,192.168.227.131:2181/zk-book",5000,new CreateUsageDemo());
+            ZooKeeper zooKeeper = new ZooKeeper(ZKConfig.CONNECTION_STR,5000,new CreateUsageDemo());
 
             System.out.println(zooKeeper.getState());
             try {
