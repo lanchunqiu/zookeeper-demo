@@ -23,7 +23,7 @@ public class DistributedLock implements Lock,Watcher {
     private String WAIT_LOCK ;
     private String CURRENT_LOCK;
 
-    private static CountDownLatch countDownLatch;
+    private CountDownLatch countDownLatch;
 
     public DistributedLock() {
         try {
